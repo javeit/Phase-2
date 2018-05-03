@@ -7,21 +7,15 @@ public class SimpleCarController : MonoBehaviour {
 
 	CarEngine engine;
 
-	void Update () {
+	void FixedUpdate () {
 		float acceleration = Input.GetAxis ("Vertical");
-		float turnAngle = Input.GetAxis ("Horizontal");
+		float direction = Input.GetAxis ("Horizontal");
 
-		//Debug.Log ("Acceleration Input: " + acceleration);
-
-		if (acceleration > 0)
-			engine.Accelerate (acceleration * engine.maxAcceleration);
-		else if (acceleration < 0)
-			engine.Decelerate (Mathf.Abs(acceleration) * engine.maxDeceleration);
-
-		engine.TurnAngle = turnAngle * engine.maxTurnAngle;
+		engine.Accelerate(acceleration);
+		engine.SetDirection(direction);
 	}
 
 	void Start() {
-		engine = GetComponent<CarEngine> ();
+		engine = GetComponent<CarEngine>();
 	}
 }
