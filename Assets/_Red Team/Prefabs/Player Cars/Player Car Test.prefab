@@ -1353,10 +1353,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1506908038424310}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6fc312fbac5d4df1995947f760746cc, type: 3}
+  m_Script: {fileID: 11500000, guid: e0d7a315eaf864dcc84055011f71714c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  engine: {fileID: 0}
+  acceleration: 0
+  deceleration: 0
+  maxSpeed: 0
+  maxReverseSpeed: 0
+  maxTurnAngle: 0
+  minTurnSpeed: 0
 --- !u!114 &114615818244931610
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1424,16 +1429,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1506908038424310}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 082e2df5353dd4812b6e59d90eddd0f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 34c788dc31231484bb5057a1b7517d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 6
-  deceleration: 10
-  maxSpeed: 20
-  maxTurnAngle: 40
-  speed: 0
-  direction: 0
-  rb: {fileID: 0}
 --- !u!114 &114750672134203190
 MonoBehaviour:
   m_ObjectHideFlags: 1

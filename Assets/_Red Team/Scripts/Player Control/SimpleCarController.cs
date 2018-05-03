@@ -8,11 +8,12 @@ public class SimpleCarController : MonoBehaviour {
 	CarEngine engine;
 
 	void FixedUpdate () {
-		float acceleration = Input.GetAxis ("Vertical");
-		float direction = Input.GetAxis ("Horizontal");
+
+        float acceleration = Input.GetAxis ("Vertical");
+		//direction = Input.GetAxis ("Horizontal");
 
 		engine.Accelerate(acceleration);
-		engine.SetDirection(direction);
+		//engine.SetDirection(direction);
 	}
 
 	void Start() {
