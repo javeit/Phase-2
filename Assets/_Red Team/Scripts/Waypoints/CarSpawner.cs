@@ -46,9 +46,11 @@ namespace RedTeam {
 				GameObject car = GameObject.Instantiate(carPrefab, carParentObject);
 
 				car.GetComponentInChildren<NavMeshAgent>().speed = Random.Range(minSpeed, maxSpeed);
+				car.GetComponentInChildren<NavMeshAgent> ().radius = 1.4f;
 
 				Waypoint waypoint = startWaypoints[Random.Range(0, startWaypoints.Count - 1)];
 
+				car.transform.localScale += new Vector3 (0.4f, 0.4f, 0.4f);
 				car.transform.position = waypoint.transform.parent.position;
 				car.GetComponentInChildren<AICarGuide>().startWaypoint = waypoint;
 			}
