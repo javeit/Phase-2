@@ -1912,6 +1912,7 @@ GameObject:
   - component: {fileID: 114824938614039390}
   - component: {fileID: 114915158469807588}
   - component: {fileID: 114526619422762356}
+  - component: {fileID: 114055386392343658}
   m_Layer: 0
   m_Name: Player Car Test
   m_TagString: Untagged
@@ -6622,6 +6623,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114055386392343658
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1717904638825380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ebcb18d6cc9461dadd1547fea9dd55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightController: {fileID: 114926133318426128}
+  leftController: {fileID: 114787501913631652}
 --- !u!114 &114060512999219792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6905,7 +6919,7 @@ MonoBehaviour:
   touchHighlightColor: {r: 0.97281945, g: 1, b: 0.50735295, a: 0.503}
   allowedTouchControllers: 0
   ignoredColliders: []
-  isGrabbable: 0
+  isGrabbable: 1
   holdButtonToGrab: 1
   stayGrabbedOnTeleport: 1
   validDrop: 1
@@ -8772,9 +8786,9 @@ MonoBehaviour:
   detatchDistance: 1
   minimumValue: 0
   maximumValue: 10
-  stepSize: 1
+  stepSize: 0.05
   snapToStep: 0
-  grabbedFriction: 0
+  grabbedFriction: 25
   releasedFriction: 5
   maxAngle: 357
   lockAtLimits: 0
