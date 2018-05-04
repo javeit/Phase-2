@@ -36,7 +36,7 @@ public class CarEngine : MonoBehaviour {
 
 	public void Reverse(float amount) {
 		amount = Mathf.Clamp(amount, -1f, 0f);
-		speed += amount * acceleration;
+		speed += amount * acceleration * Time.fixedDeltaTime;
 		speed = Mathf.Clamp(speed, -1 * maxReverseSpeed, 0f);
 	}
 
